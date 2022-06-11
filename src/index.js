@@ -18,7 +18,7 @@ let search = async () => {
   try {
     let data = await get(query);
     showResult(data);
-    console.log(data.data);
+    // console.log(data.data);
   }
   catch({response:{status}}) {
     // console.log('hahah Error',err);
@@ -50,7 +50,7 @@ let showResult = async ({data}) => {
       // console.log(item);
       let res = await get(item.url);
       let info = res.data;
-      console.log(info);
+      // console.log(info);
       container.append(createCard(info));
     }
   }
@@ -108,7 +108,7 @@ input.addEventListener('input',()=>{
 let showRandom = async () => {
   let query = `${url}/?limit=50`;
   let data = await get(query);
-  console.log(data);
+  // console.log(data);
   showResult(data);
   // console.log(results);
 }
